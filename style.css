@@ -1,0 +1,116 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+/* Page Background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Calculator Container */
+.calculator {
+    background: #1f1f1f;
+    padding: 25px;
+    border-radius: 20px;
+    width: 280px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    animation: pop 0.4s ease;
+}
+
+/* Animation */
+@keyframes pop {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Display */
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 26px;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: #000;
+    color: #00ffcc;
+    box-shadow: inset 0 0 10px rgba(0, 255, 204, 0.4);
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Button Base */
+button {
+    height: 55px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #333;
+    color: #fff;
+    box-shadow: 0 6px #111;
+    transition: all 0.15s ease;
+}
+
+/* Button Press Effect */
+button:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px #111;
+}
+
+/* Number Buttons */
+button:nth-child(n+5) {
+    background: #2c2c2c;
+}
+
+/* Operator Buttons */
+button:nth-child(2),
+button:nth-child(3),
+button:nth-child(4),
+button:nth-child(8) {
+    background: #ff9800;
+    color: #000;
+}
+
+/* Equal Button */
+button:nth-child(12) {
+    background: #4caf50;
+    color: #fff;
+    grid-row: span 2;
+    height: 122px;
+}
+
+/* Clear Button */
+button:nth-child(1) {
+    background: #f44336;
+    color: #fff;
+}
+
+/* Zero Button (Optional wider look) */
+button:last-child {
+    grid-column: span 2;
+}
+
+/* Hover Effects */
+button:hover {
+    filter: brightness(1.2);
+}
