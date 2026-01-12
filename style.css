@@ -68,7 +68,8 @@ button {
     background: #333;
     color: #fff;
     box-shadow: 0 6px #111;
-    transition: all 0.15s ease;
+    transition: all 0.25s ease;
+
 }
 
 /* Button Press Effect */
