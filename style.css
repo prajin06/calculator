@@ -64,11 +64,11 @@ body {
 
 /* Button Base */
 button {
-    height: 55px;
-    font-size: 18px;
+    height: 54px;
+    font-size: 17px;
     font-weight: bold;
     border: none;
-    border-radius: 12px;
+    border-radius: 13px;
     cursor: pointer;
     background: #333;
     color: #fff;
